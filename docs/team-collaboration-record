@@ -1,0 +1,50 @@
+# Team Collaboration Record
+
+## 1. Team Member Responsibilities
+
+- **Lizaa Chato – Team Coordinator and Repository Owner:** Responsible for the README, requirements, documentation, final report, and merging approved pull requests.
+- **Bushra Faris – System Analysis and UML Modelling:** Responsible for `diagrams/` and `docs/modeling/`.
+- **Passar Khdir – Database Design and Back-End Development:** Responsible for `src/backend/` and `src/database/`.
+- **Ariyan Walid – User Interface, Front-End Development, and Testing:** Responsible for `src/frontend/` and `tests/`.
+
+Each member mainly works in their assigned folders. Any member may propose changes through a pull request.
+
+## 2. Branch and Commit Workflow
+
+- The `main` branch contains reviewed and working project files. Members must not push directly to `main`.
+- Before starting a task, update the local main branch using `git switch main` and `git pull`.
+- Create a separate task branch using `git switch -c <type>/<short-description>`.
+- Branch types include `feature/`, `docs/`, and `fix/`. For example: `feature/item-list`.
+- Work should be saved in small, focused commits.
+- Before each commit, use `git status` and `git diff --staged` to check the changes.
+- Commit messages should be clear and written as actions, such as "Add class diagram" or "Fix login validation".
+- Push the task branch using `git push -u origin <branch>` and open a pull request.
+- Each pull request should explain its purpose, changes, tests, and known limitations.
+- After approval, merge the pull request into `main` and delete the task branch.
+- Never force-push shared branches.
+
+## 3. Code Review and Testing
+
+- Every pull request requires at least one approval from a teammate who did not create the pull request.
+- The reviewer checks the purpose of the changes, correct folder placement, consistency with the SRS and diagram requirements (FR/NFR IDs), and that no secrets or private data are included.
+- Code changes must include or update relevant tests.
+- Documentation changes must be opened and read before approval.
+- Review comments should be answered within two days. The author should make corrections through new commits on the same branch.
+
+## 4. Conflict Handling
+
+- Members should regularly update their work from `main`, especially before opening a pull request.
+- If a merge conflict occurs, inspect both versions and discuss the intended result with the teammate.
+- Check the SRS when a conflict involves a project requirement.
+- Edit the file to resolve the conflict and remove conflict markers.
+- Run the relevant tests or open the document to check the result.
+- Add and commit the resolved file.
+- Never choose one version blindly.
+- If the team cannot agree, the team coordinator makes the decision. Ask Dr. Sirwan when the conflict concerns unclear project requirements.
+- Members should coordinate through the group chat before editing the same file to avoid conflicts.
+
+## 5. Repository Safety
+
+- Never commit passwords, access tokens, private keys, or personal data.
+- Keep secrets in a local `.env` file, which must be ignored by `.gitignore`.
+- If a secret is accidentally committed, inform the team immediately and rotate the secret. Deleting it from the latest version is not enough.
